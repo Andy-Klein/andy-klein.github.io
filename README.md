@@ -1,2 +1,2 @@
 # andy-klein.github.io
-Personal website for blogposts, small projects, and resume.
+My personal website for blogposts, small projects, and resume.
