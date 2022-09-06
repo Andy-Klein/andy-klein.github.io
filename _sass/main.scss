@@ -1,0 +1,18 @@
+
+$ctp-mocha-base: #1e1e2e;
+$ctp-mocha-text: #c6d0f5;
+$ctp-mocha-rosewater: #f5e0dc;
+
+body {
+  color: var(--ctp-mocha-text);
+  background: var(--ctp-mocha-base);
+}
+
+a {
+  color: var(--ctp-mocha-rosewater);
+}
+
+img {
+  width: 500px;
+  height: auto;
+}
