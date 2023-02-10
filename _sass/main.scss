@@ -3,6 +3,14 @@ body {
   background: #1e1e2e;
 }
 
+body a {
+  color: #a6e3a1;
+}
+
+.header{
+  margin:auto
+}
+
 nav a {
   color: #cdd6f4;
 }
@@ -12,9 +20,5 @@ nav a:hover {
 }
 
 .current {
-  color: #a6e3a1;
-}
-
-a {
   color: #a6e3a1;
 }
