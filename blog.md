@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog | Andy Klein
+title: Blog
 ---
 <h1>Latest Posts</h1>
 

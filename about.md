@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About Me | Andy Klein
+title: About Me
 ---
 # About Me
 
