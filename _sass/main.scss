@@ -9,12 +9,24 @@ body a {
 }
 
 /* Header and Top Nav Styles */
-.header {
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  background-size: 200px 250px;
+  font-size: large;
+}
+
+nav {
   display: flex;
 }
 
-.header div {
-  flex: 1;
+.nav-links {
+  display: flex;
+  padding: 10px;
 }
 
 nav a {
