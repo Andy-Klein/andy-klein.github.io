@@ -8,9 +8,13 @@ body a {
   color: #a6e3a1;
 }
 
-/* Top Nav Styles */
-.logo {
-  display:inline-block;
+/* Header and Top Nav Styles */
+.header {
+  display: flex;
+}
+
+.header div {
+  flex: auto;
 }
 
 nav a {
