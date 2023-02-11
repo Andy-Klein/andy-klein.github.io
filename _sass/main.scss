@@ -1,3 +1,4 @@
+/* global colors */
 body {
   color: #cdd6f4;
   background: #1e1e2e;
@@ -7,8 +8,9 @@ body a {
   color: #a6e3a1;
 }
 
-.header{
-  margin:auto
+/* Top Nav Styles */
+.logo {
+  display:inline-block;
 }
 
 nav a {
