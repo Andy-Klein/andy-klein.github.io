@@ -2,38 +2,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* Global Colors */
-body {
+* {
   font-family: 'Roboto', sans-serif;
   color: #cdd6f4;
   background: #1e1e2e;
 }
 
-body a {
-  color: #a6e3a1;
-}
-
-/* Header and Top Nav Styles */
+/* Header Container */
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.logo-container {
+/* Left Side (Logo and name) */
+.logo {
+  border: 1px solid #fff;  /* For debugging */
   display: flex;
+  width: 900px;
+  justify-content: flex-start;
+  align-items: flex-end;
   font-size: larger;
+  text-decoration: none;
 }
 
+/* Right Side (nav links) */
 nav {
+  border: 1px solid #fff;  /* For debugging */
+  width: 900px;
   display: flex;
+  justify-content: center;
 }
 
-.nav-links {
+.navlinks {
   display: flex;
-  padding: 10px;
+  align-items: center;
+  padding: 6px;
 }
 
 nav a {
   color: #cdd6f4;
+  text-decoration: none;
 }
 
 nav a:hover {
