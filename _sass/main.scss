@@ -16,18 +16,21 @@
 
 /* Left Side (Logo and name) */
 .logo {
-  border: 1px solid #fff;  /* For debugging */
+  /* border: 1px solid #fff;  /* For debugging */
   display: flex;
   width: 900px;
   justify-content: flex-start;
-  align-items: flex-end;
-  font-size: larger;
+  align-items: center;
+  font-size: x-large;
+}
+
+.logo a {
   text-decoration: none;
 }
 
 /* Right Side (nav links) */
 nav {
-  border: 1px solid #fff;  /* For debugging */
+  /* border: 1px solid #fff;  /* For debugging */
   width: 900px;
   display: flex;
   justify-content: center;
