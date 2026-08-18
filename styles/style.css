@@ -1,0 +1,328 @@
+/* ===================================================================
+   Tokyo Night theme
+   Palette sourced from the Tokyo Night VS Code theme (Enkia) via
+   https://wixdaq.github.io/Tokyo-Night-Website/
+=================================================================== */
+
+:root {
+  --tn-bg: #1a1b26;
+  --tn-bg-dark: #16161e;
+  --tn-bg-highlight: #292e42;
+  --tn-terminal-black: #414868;
+  --tn-comment: #565f89;
+  --tn-fg: #c0caf5;
+  --tn-fg-dark: #9aa5ce;
+  --tn-red: #f7768e;
+  --tn-orange: #ff9e64;
+  --tn-yellow: #e0af68;
+  --tn-green: #9ece6a;
+  --tn-teal: #73daca;
+  --tn-teal-bright: #b4f9f8;
+  --tn-cyan: #7dcfff;
+  --tn-cyan-dark: #2ac3de;
+  --tn-blue: #7aa2f7;
+  --tn-purple: #bb9af7;
+
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --radius: 10px;
+  --border: 1px solid var(--tn-bg-highlight);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(122, 162, 247, 0.14), transparent 60%),
+    radial-gradient(ellipse 800px 500px at 100% 10%, rgba(187, 154, 247, 0.10), transparent 55%),
+    var(--tn-bg-dark);
+  color: var(--tn-fg);
+  font-family: var(--font-mono);
+  line-height: 1.5;
+}
+
+/* ---------------------------------- header / nav ---------------------------------- */
+
+header {
+  border-bottom: var(--border);
+  background: rgba(22, 22, 30, 0.75);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-brand {
+  color: var(--tn-comment);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px 6px 0 0;
+  border: 1px solid transparent;
+  border-bottom: none;
+  color: var(--tn-fg-dark);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.tab-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--tn-comment);
+  flex-shrink: 0;
+}
+
+.tab:hover {
+  color: var(--tn-fg);
+  background: var(--tn-bg-highlight);
+}
+
+.tab.is-active {
+  color: var(--tn-cyan);
+  background: var(--tn-bg);
+  border-color: var(--tn-bg-highlight);
+}
+
+.tab.is-active .tab-dot {
+  background: var(--tn-green);
+  box-shadow: 0 0 6px var(--tn-green);
+}
+
+/* ---------------------------------- main / editor window ---------------------------------- */
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.25rem;
+}
+
+.editor-window {
+  width: 100%;
+  max-width: 720px;
+  background: var(--tn-bg);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(122, 162, 247, 0.04);
+  overflow: hidden;
+}
+
+.editor-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  background: var(--tn-bg-highlight);
+  border-bottom: var(--border);
+}
+
+.editor-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.editor-dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.editor-dots span:nth-child(1) { background: var(--tn-red); }
+.editor-dots span:nth-child(2) { background: var(--tn-yellow); }
+.editor-dots span:nth-child(3) { background: var(--tn-green); }
+
+.editor-filename {
+  color: var(--tn-fg-dark);
+  font-size: 0.8rem;
+}
+
+.editor-body {
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.editor-code {
+  margin: 0 0 1.75rem;
+  padding: 1rem 1.1rem;
+  background: var(--tn-bg-dark);
+  border: var(--border);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.editor-code .ln {
+  display: inline-block;
+  width: 1.4rem;
+  color: var(--tn-terminal-black);
+  user-select: none;
+}
+
+.code-line {
+  padding-right: 0.5rem;
+}
+
+.tok-comment { color: var(--tn-comment); font-style: italic; }
+.tok-keyword { color: var(--tn-purple); }
+.tok-var     { color: var(--tn-fg); }
+.tok-op      { color: var(--tn-cyan); }
+.tok-fn      { color: var(--tn-blue); }
+.tok-string  { color: var(--tn-green); }
+.tok-punct   { color: var(--tn-fg-dark); }
+
+.status-block {
+  text-align: left;
+}
+
+.status-title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  color: var(--tn-orange);
+  text-shadow: 0 0 24px rgba(255, 158, 100, 0.25);
+}
+
+.status-sub {
+  margin: 0 0 1.5rem;
+  color: var(--tn-fg-dark);
+  font-size: 0.95rem;
+}
+
+.progress-track {
+  height: 8px;
+  width: 100%;
+  background: var(--tn-bg-highlight);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 42%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--tn-cyan-dark), var(--tn-blue), var(--tn-purple));
+  background-size: 200% 100%;
+  animation: shimmer 2.6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 0%; }
+  100% { background-position: 0% 0%; }
+}
+
+.terminal-line {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--tn-fg-dark);
+}
+
+.prompt {
+  color: var(--tn-green);
+  margin-right: 0.5rem;
+}
+
+#typed-text {
+  color: var(--tn-teal);
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  margin-left: 2px;
+  background: var(--tn-fg);
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* ---------------------------------- footer ---------------------------------- */
+
+footer {
+  border-top: var(--border);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  color: var(--tn-comment);
+  font-size: 0.8rem;
+}
+
+/* ---------------------------------- responsive ---------------------------------- */
+
+@media (max-width: 560px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .editor-body {
+    padding: 1.1rem 1rem 1.5rem;
+  }
+
+  .editor-code {
+    font-size: 0.72rem;
+  }
+}
+
+/* ---------------------------------- accessibility ---------------------------------- */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--tn-cyan);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-fill,
+  .cursor {
+    animation: none;
+  }
+}

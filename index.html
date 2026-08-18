@@ -1,31 +1,67 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andy Klein</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <script src="scripts/main.js" defer></script>
-  </head>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Andy Klein</title>
+<meta name="description" content="Andy Klein — site under construction." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles/style.css" />
+<script src="scripts/main.js" defer></script>
+</head>
 
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<body>
+<header>
+<nav>
+<span class="nav-brand" aria-hidden="true">~/andrew-klein</span>
+<ul>
+<li><a href="index.html" class="tab is-active"><span class="tab-dot"></span>home.html</a></li>
+<li><a href="about.html" class="tab">about.html</a></li>
+<li><a href="contact.html" class="tab">contact.html</a></li>
+</ul>
+</nav>
+</header>
 
-    <main>
-      <h1>Under Construction</h1>
-      <p>Good things are on the way</p>
-    </main>
+<main>
+<div class="editor-window" role="region" aria-label="Site status">
 
-    <footer>
-      <p>&copy; <span id="year"></span> Andrew Klein. All rights reserved.</p>
-    </footer>
-  </body>
+<div class="editor-titlebar">
+<div class="editor-dots" aria-hidden="true">
+<span></span><span></span><span></span>
+</div>
+<span class="editor-filename">build.log</span>
+</div>
+
+<div class="editor-body">
+<pre class="editor-code" aria-hidden="true"><span class="ln">1</span><span class="code-line"><span class="tok-comment">// status: work in progress</span></span>
+<span class="ln">2</span><span class="code-line"></span>
+<span class="ln">3</span><span class="code-line"><span class="tok-keyword">const</span> <span class="tok-var">site</span> <span class="tok-op">=</span> <span class="tok-fn">build</span><span class="tok-punct">(</span><span class="tok-string">"andrew-klein"</span><span class="tok-punct">);</span></span>
+<span class="ln">4</span><span class="code-line"></span>
+<span class="ln">5</span><span class="code-line"><span class="tok-keyword">if</span> <span class="tok-punct">(</span><span class="tok-var">site</span><span class="tok-punct">.</span><span class="tok-fn">status</span> <span class="tok-op">===</span> <span class="tok-string">"under_construction"</span><span class="tok-punct">)</span> <span class="tok-punct">{</span></span>
+<span class="ln">6</span><span class="code-line">&nbsp;&nbsp;<span class="tok-fn">render</span><span class="tok-punct">(</span><span class="tok-string">"Good things are on the way."</span><span class="tok-punct">);</span></span>
+<span class="ln">7</span><span class="code-line"><span class="tok-punct">}</span></span></pre>
+
+<div class="status-block">
+<h1 class="status-title">Under Construction</h1>
+<p class="status-sub">This page is being rebuilt. Check back soon for the finished version.</p>
+
+<div class="progress-track" role="progressbar" aria-label="Build progress" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100">
+<div class="progress-fill"></div>
+</div>
+
+<p class="terminal-line">
+<span class="prompt">$</span>
+<span id="typed-text"></span><span class="cursor" aria-hidden="true"></span>
+</p>
+</div>
+</div>
+</div>
+</main>
+
+<footer>
+<p><span class="tok-comment">//</span> &copy; <span id="year"></span> Andrew Klein. All rights reserved.</p>
+</footer>
+</body>
 </html>
